@@ -18,6 +18,10 @@ const propertySchema = new mongoose.Schema({
     ref: "User",
     required: true,
   },
+    amenities: {
+    type: [String],
+    default: [],
+  },
   createdAt: {
     type: Date,
     default: Date.now,
@@ -28,9 +32,3 @@ const Property = mongoose.model("Property", propertySchema);
 
 export default Property;
 
-// title
-// location
-// pricePerNight
-// ownerId (ref → User)
-// amenities (array)
-// createdAt
